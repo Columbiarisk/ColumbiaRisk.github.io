@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation - RBC Stress Test Project</title>
+    <meta
+      name="description"
+      content="Complete technical documentation for the RBC Stress Test Project"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/docs.css" />
+  </head>
+  <body class="docs-page">
+    <!-- ===== Header ===== -->
+    <header class="site-header">
+      <div class="container nav">
+        <a href="index.html" class="brand">
+          RBC Stress Test
+          <span class="brand-sub">Project Documentation</span>
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="docs.html">Documentation</a></li>
+          <li><a href="weekly-reports.html">Weekly Reports</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="docs-shell">
+      <!-- ===== Sidebar Navigation ===== -->
+      <aside class="docs-sidebar" id="docs-sidebar">
+        <div class="docs-search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input id="docs-search-input" type="text" placeholder="Search documentation…" autocomplete="off" />
+        </div>
+
+        <div class="docs-title-block">
+          <div class="doc-name">RBC Stress Test</div>
+          <div class="doc-meta">Latest Documentation</div>
+        </div>
+
+        <!-- ===== Latest Full Documentation ===== -->
+        <ul class="docs-nav">
+          <li class="nav-part">Latest Full Documentation</li>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#architecture">Architecture</a></li>
+          <li><a href="#getting-started">Getting Started</a></li>
+          
+          <li class="nav-part">Core Components</li>
+          <li><a href="#data-pipeline">Data Pipeline</a></li>
+          <li><a href="#risk-factors">Risk Factor Universe</a></li>
+          <li><a href="#data-transforms">Data Transforms</a></li>
+          <li><a href="#correlation">Correlation & Covariance</a></li>
+          
+          <li class="nav-part">Scenario Engine</li>
+          <li><a href="#scenario-generation">Scenario Generation</a></li>
+          <li><a href="#conditional-gaussian">Conditional Gaussian</a></li>
+          <li><a href="#multicollinearity">Multicollinearity Checks</a></li>
+          <li><a href="#validation">Validation & Testing</a></li>
+          
+          <li class="nav-part">Risk Analysis</li>
+          <li><a href="#risk-metrics">Risk Metrics</a></li>
+          <li><a href="#stress-testing">Stress Testing</a></li>
+          <li><a href="#greeks">Greeks & Sensitivities</a></li>
+          
+          <li class="nav-part">API Reference</li>
+          <li><a href="#api-core">Core API</a></li>
+          <li><a href="#api-scenarios">Scenario API</a></li>
+          <li><a href="#api-risk">Risk Analysis API</a></li>
+          
+          <li class="nav-part">Weekly Reports</li>
+          <li><a href="#latest-report">Latest Report</a></li>
+          <li><a href="#reports-archive">Reports Archive</a></li>
+        </ul>
+      </aside>
+
+      <!-- ===== Main Content ===== -->
+      <div class="docs-main">
+        <button class="docs-menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
+        
+        <div class="docs-content">
+          <!-- ===== Overview Section ===== -->
+          <h1 id="overview">RBC Stress Test Project - Complete Documentation</h1>
+
+          <div class="callout info">
+            <div class="callout-title">📖 Welcome</div>
+            <p>
+              This is the complete technical documentation for the RBC Stress Test Project. 
+              Use the navigation menu on the left to explore different sections.
+            </p>
+          </div>
+
+          <p>
+            The RBC Stress Test Project is a comprehensive quantitative framework for 
+            multi-asset scenario generation, stress testing, and risk analysis. This documentation 
+            covers the complete architecture, implementation details, and usage guidelines.
+          </p>
+
+          <h2 id="architecture">Architecture Overview</h2>
+
+          <p>
+            The project is organized into several key components:
+          </p>
+
+          <ul>
+            <li><strong>Data Pipeline</strong>: Market data integration, cleaning, and validation</li>
+            <li><strong>Risk Factor Universe</strong>: Comprehensive set of market risk factors</li>
+            <li><strong>Scenario Engine</strong>: Multi-asset scenario generation framework</li>
+            <li><strong>Risk Analysis</strong>: Portfolio risk metrics and stress testing</li>
+            <li><strong>Reporting</strong>: Automated regulatory and analytical reporting</li>
+          </ul>
+
+          <div class="callout info">
+            <div class="callout-title">ℹ️ Architecture Diagram</div>
+            <pre><code>┌─────────────────────────────────────────────────┐
+│              Market Data Sources                │
+│   (Bloomberg, Reuters, Other Providers)         │
+└────────────────────┬────────────────────────────┘
+                     │
+                     ▼
+┌─────────────────────────────────────────────────┐
+│           Data Pipeline & Validation             │
+│   (Cleaning, Screening, Transformation)         │
+└────────────────────┬────────────────────────────┘
+                     │
+        ┌────────────┴────────────┐
+        ▼                         ▼
+┌──────────────────┐    ┌─────────────────────┐
+│  Risk Factors    │    │  Covariance Matrix  │
+│  Universe        │    │  Estimation         │
+└────────┬─────────┘    └──────────┬──────────┘
+         │                         │
+         └────────────┬────────────┘
+                      ▼
+         ┌────────────────────────┐
+         │  Scenario Generation    │
+         │  (Conditional Gaussian) │
+         └────────────┬────────────┘
+                      │
+         ┌────────────┴──────────┬─────────┐
+         ▼                       ▼         ▼
+    ┌────────┐          ┌───────────┐  ┌──────┐
+    │  Risk  │          │ Reporting │  │ API  │
+    │Metrics │          │           │  │      │
+    └────────┘          └───────────┘  └──────┘</code></pre>
+          </div>
+
+          <h2 id="getting-started">Getting Started</h2>
+
+          <p>
+            To get started with the RBC Stress Test Project:
+          </p>
+
+          <ol>
+            <li>Review the project architecture and components</li>
+            <li>Set up the development environment</li>
+            <li>Load and validate market data</li>
+            <li>Generate initial scenarios</li>
+            <li>Run risk analysis and reporting</li>
+          </ol>
+
+          <h2 id="data-pipeline">Data Pipeline</h2>
+
+          <p>
+            The data pipeline handles all market data ingestion, validation, and transformation. 
+            It ensures data quality and consistency across the entire system.
+          </p>
+
+          <h3>Data Sources</h3>
+
+          <p>
+            The project integrates data from multiple sources:
+          </p>
+
+          <table class="docs-table">
+            <thead>
+              <tr>
+                <th>Source</th>
+                <th>Asset Class</th>
+                <th>Frequency</th>
+                <th>Coverage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bloomberg</td>
+                <td>Equities, FX, Rates, Commodities</td>
+                <td>Daily</td>
+                <td>Global</td>
+              </tr>
+              <tr>
+                <td>Reuters</td>
+                <td>Equities, FX, Rates</td>
+                <td>Daily</td>
+                <td>Global</td>
+              </tr>
+              <tr>
+                <td>Internal Systems</td>
+                <td>Portfolio Data, Custom Factors</td>
+                <td>Real-time</td>
+                <td>Internal</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Data Validation</h3>
+
+          <p>
+            All data undergoes rigorous validation:
+          </p>
+
+          <ul>
+            <li>Missing data detection and handling</li>
+            <li>Outlier identification and treatment</li>
+            <li>Cross-source consistency checks</li>
+            <li>Historical lookback validation</li>
+          </ul>
+
+          <h2 id="risk-factors">Risk Factor Universe</h2>
+
+          <p>
+            The risk factor universe comprises 1000+ factors across multiple asset classes:
+          </p>
+
+          <ul>
+            <li><strong>Equities</strong>: Indices, sectors, individual stocks</li>
+            <li><strong>Fixed Income</strong>: Yield curves, spreads, credit indices</li>
+            <li><strong>FX</strong>: Currency pairs, volatility, carry factors</li>
+            <li><strong>Commodities</strong>: Energy, metals, agriculture, indices</li>
+            <li><strong>Custom</strong>: Proprietary factors and overlays</li>
+          </ul>
+
+          <h2 id="data-transforms">Data Transforms</h2>
+
+          <p>
+            Raw market data is transformed through multiple stages:
+          </p>
+
+          <ul>
+            <li><strong>Price to Return</strong>: Converting price series to returns</li>
+            <li><strong>Log Returns</strong>: Computing log returns for statistical properties</li>
+            <li><strong>Standardization</strong>: Centering and scaling data</li>
+            <li><strong>Detrending</strong>: Removing trends for stationarity</li>
+          </ul>
+
+          <h2 id="correlation">Correlation & Covariance Estimation</h2>
+
+          <p>
+            The project employs sophisticated methods for covariance estimation:
+          </p>
+
+          <ul>
+            <li><strong>Historical Covariance</strong>: Direct estimation from data</li>
+            <li><strong>EWMA</strong>: Exponentially Weighted Moving Average</li>
+            <li><strong>Factor Models</strong>: Multi-factor covariance structures</li>
+            <li><strong>Shrinkage Estimators</strong>: Improving stability and conditioning</li>
+          </ul>
+
+          <h2 id="scenario-generation">Scenario Generation</h2>
+
+          <p>
+            The core of the project is the scenario generation engine, which creates 
+            realistic multi-asset scenarios for stress testing and analysis.
+          </p>
+
+          <h2 id="conditional-gaussian">Conditional Gaussian Scenarios</h2>
+
+          <p>
+            The project generates scenarios using conditional Gaussian models:
+          </p>
+
+          <ol>
+            <li>Specify conditioning factors and their values</li>
+            <li>Compute conditional distribution parameters</li>
+            <li>Generate samples from the conditional distribution</li>
+            <li>Validate and test generated scenarios</li>
+          </ol>
+
+          <h2 id="multicollinearity">Multicollinearity Checks</h2>
+
+          <p>
+            The system includes robust checks for multicollinearity issues:
+          </p>
+
+          <ul>
+            <li>Condition number analysis</li>
+            <li>Variance Inflation Factor (VIF) computation</li>
+            <li>Correlation matrix diagnostics</li>
+            <li>Eigenvalue analysis</li>
+          </ul>
+
+          <h2 id="validation">Validation & Testing</h2>
+
+          <p>
+            Comprehensive validation ensures scenario quality:
+          </p>
+
+          <ul>
+            <li>Statistical tests (normality, autocorrelation, etc.)</li>
+            <li>Correlation matching tests</li>
+            <li>Moment matching verification</li>
+            <li>Stress test consistency checks</li>
+          </ul>
+
+          <h2 id="risk-metrics">Risk Analysis</h2>
+
+          <p>
+            The risk analysis module computes comprehensive risk metrics:
+          </p>
+
+          <ul>
+            <li><strong>Value at Risk (VaR)</strong>: Parametric and historical</li>
+            <li><strong>Expected Shortfall (CVaR)</strong>: Tail risk measures</li>
+            <li><strong>Greeks</strong>: Delta, Gamma, Vega, Rho, Theta</li>
+            <li><strong>Stress Test Results</strong>: Portfolio impacts under scenarios</li>
+          </ul>
+
+          <h2 id="stress-testing">Stress Testing Framework</h2>
+
+          <p>
+            The stress testing framework supports both historical and hypothetical scenarios.
+          </p>
+
+          <h2 id="greeks">Greeks & Sensitivities</h2>
+
+          <p>
+            Comprehensive Greeks and sensitivity analysis for derivatives and portfolios.
+          </p>
+
+          <h2 id="api-core">Core API Reference</h2>
+
+          <p>
+            The main API provides access to core functionality:
+          </p>
+
+          <pre><code class="language-python">from rbc_stress_test import StressTestEngine, ScenarioGenerator
+
+# Initialize the engine
+engine = StressTestEngine()
+
+# Generate scenarios
+scenarios = ScenarioGenerator.generate(
+    n_scenarios=10000,
+    risk_factors=risk_factor_universe,
+    covariance_matrix=cov_matrix,
+    conditioning_factors=conditioning_shocks
+)</code></pre>
+
+          <h2 id="api-scenarios">Scenario API</h2>
+
+          <p>
+            Detailed API for scenario generation and management.
+          </p>
+
+          <h2 id="api-risk">Risk Analysis API</h2>
+
+          <p>
+            API for computing risk metrics and performing stress testing.
+          </p>
+
+          <h2 id="latest-report">Latest Weekly Report</h2>
+
+          <p>
+            The latest weekly report is available <a href="weekly-reports.html">here</a>.
+          </p>
+
+          <h2 id="reports-archive">Reports Archive</h2>
+
+          <p>
+            All previous weekly reports are archived and available for reference.
+          </p>
+
+          <div class="callout success">
+            <div class="callout-title">✓ Documentation Complete</div>
+            <p>
+              For questions or additional information, please refer to the 
+              <a href="weekly-reports.html">weekly reports</a> or contact the project team.
+            </p>
+          </div>
+
+          <!-- ===== Documentation Footer ===== -->
+          <div class="docs-footer" style="margin-top: 64px;">
+            <div>
+              <p style="margin: 0;">Documentation Version: 1.0</p>
+              <p style="margin: 0; font-size: 0.85rem; color: var(--text-light);">
+                Last Updated: June 25, 2026
+              </p>
+            </div>
+            <div class="docs-nav-links">
+              <a href="index.html">← Back to Home</a>
+              <a href="weekly-reports.html">Weekly Reports →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Scripts ===== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>
+      // Highlight code blocks
+      document.querySelectorAll('pre code').forEach(block => {
+        hljs.highlightElement(block);
+      });
+
+      // Navigation toggle for mobile
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+
+      navToggle?.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+
+      // Close menu when link is clicked
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+        });
+      });
+
+      // Sidebar toggle for mobile
+      function toggleSidebar() {
+        const sidebar = document.getElementById('docs-sidebar');
+        sidebar.classList.toggle('active');
+      }
+
+      // Active link highlighting based on scroll position
+      function updateActiveLink() {
+        const sections = document.querySelectorAll('[id^=""]');
+        const navLinks = document.querySelectorAll('.docs-nav a');
+
+        sections.forEach(section => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 150 && rect.bottom >= 150) {
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === `#${section.id}`) {
+                link.classList.add('active');
+              }
+            });
+          }
+        });
+      }
+
+      window.addEventListener('scroll', updateActiveLink);
+      updateActiveLink();
+
+      // Search functionality
+      const searchInput = document.getElementById('docs-search-input');
+      const contentContainer = document.querySelector('.docs-content');
+
+      searchInput?.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        if (query.length > 2) {
+          const text = contentContainer.innerText.toLowerCase();
+          if (text.includes(query)) {
+            console.log(`Found: ${query}`);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

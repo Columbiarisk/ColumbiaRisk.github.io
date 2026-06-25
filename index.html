@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RBC Stress Test Project</title>
+    <meta
+      name="description"
+      content="RBC Stress Test Project - Multi-asset scenario generation and risk analysis framework"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 32px;
+        margin: 48px 0;
+      }
+
+      .feature-card {
+        padding: 32px;
+        background: var(--bg-soft);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .feature-card:hover {
+        border-color: var(--accent);
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(212, 55, 31, 0.15);
+      }
+
+      .feature-card h3 {
+        margin-top: 0;
+        color: var(--accent);
+      }
+
+      .feature-card p {
+        color: var(--text-light);
+        line-height: 1.7;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 24px;
+        margin: 48px 0;
+        text-align: center;
+      }
+
+      .stat-item {
+        padding: 24px;
+        background: var(--bg-soft);
+        border-radius: 8px;
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--accent);
+        margin-bottom: 8px;
+      }
+
+      .stat-label {
+        font-size: 0.95rem;
+        color: var(--text-light);
+        font-weight: 500;
+      }
+
+      .team-section {
+        margin: 48px 0;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 32px;
+        margin-top: 32px;
+      }
+
+      .team-member {
+        text-align: center;
+      }
+
+      .team-member h4 {
+        margin-top: 12px;
+      }
+
+      .team-member p {
+        font-size: 0.9rem;
+        color: var(--text-light);
+        margin: 0;
+      }
+
+      .documentation-preview {
+        background: linear-gradient(135deg, #f5f1ee 0%, #ffffff 100%);
+        padding: 48px 24px;
+        border-radius: 12px;
+        margin: 48px 0;
+        text-align: center;
+      }
+
+      .documentation-preview h2 {
+        margin-top: 0;
+      }
+
+      .documentation-preview p {
+        font-size: 1.1rem;
+        color: var(--text-light);
+        max-width: 600px;
+        margin: 16px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== Header ===== -->
+    <header class="site-header">
+      <div class="container nav">
+        <a href="index.html" class="brand">
+          RBC Stress Test
+          <span class="brand-sub">Project Documentation</span>
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="docs.html">Documentation</a></li>
+          <li><a href="weekly-reports.html">Weekly Reports</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- ===== Main Content ===== -->
+    <main>
+      <!-- ===== Hero Section ===== -->
+      <section class="hero">
+        <div class="container">
+          <h1>RBC Stress Test Project</h1>
+          <p>
+            A comprehensive multi-asset scenario generation and risk analysis framework
+            for stress testing and regulatory reporting
+          </p>
+          <div class="cta-buttons">
+            <a href="docs.html" class="btn btn-primary">View Documentation</a>
+            <a href="weekly-reports.html" class="btn btn-secondary">Weekly Reports</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Features Section ===== -->
+      <section class="container">
+        <h2>Project Overview</h2>
+        <div class="features">
+          <div class="feature-card">
+            <h3>📊 Multi-Asset Scenarios</h3>
+            <p>
+              Generate conditional Gaussian scenarios across equity, fixed income, 
+              FX, and commodities with sophisticated correlation modeling.
+            </p>
+          </div>
+          <div class="feature-card">
+            <h3>⚙️ Risk Analysis Engine</h3>
+            <p>
+              Advanced risk metrics computation including VaR, CVaR, Greeks, and 
+              custom risk factor sensitivities.
+            </p>
+          </div>
+          <div class="feature-card">
+            <h3>📈 Stress Testing Framework</h3>
+            <p>
+              Historical and hypothetical stress scenarios with flexible parameter 
+              configuration and automated reporting.
+            </p>
+          </div>
+          <div class="feature-card">
+            <h3>🔍 Data Management</h3>
+            <p>
+              Comprehensive data pipeline with market data integration, screening 
+              mechanisms, and validation checks.
+            </p>
+          </div>
+          <div class="feature-card">
+            <h3>📋 Regulatory Reporting</h3>
+            <p>
+              Automated generation of regulatory reports with audit trails 
+              and comprehensive documentation.
+            </p>
+          </div>
+          <div class="feature-card">
+            <h3>🎯 Weekly Updates</h3>
+            <p>
+              Automated weekly reports tracking project progress, metrics, and 
+              scenario analysis results.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Stats Section ===== -->
+      <section class="container">
+        <h2>Project Statistics</h2>
+        <div class="stats">
+          <div class="stat-item">
+            <div class="stat-number">1000+</div>
+            <div class="stat-label">Risk Factors</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">10K+</div>
+            <div class="stat-label">Scenarios</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Stress Tests</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">Weekly</div>
+            <div class="stat-label">Updates</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Documentation Section ===== -->
+      <section class="documentation-preview">
+        <div class="container">
+          <h2>Comprehensive Documentation</h2>
+          <p>
+            Access complete technical documentation organized in Bookdown style 
+            with detailed methodology, API references, and implementation guides.
+          </p>
+          <a href="docs.html" class="btn btn-primary" style="margin-top: 24px;">
+            Explore Documentation →
+          </a>
+        </div>
+      </section>
+
+      <!-- ===== Weekly Reports Section ===== -->
+      <section class="container">
+        <h2>Weekly Reports</h2>
+        <p>
+          Stay updated with weekly analysis reports covering project progress, 
+          market insights, and scenario analysis results.
+        </p>
+        <a href="weekly-reports.html" class="btn btn-secondary">View All Reports →</a>
+      </section>
+
+      <!-- ===== Team Section ===== -->
+      <section class="container team-section" id="about">
+        <h2>About This Project</h2>
+        <p>
+          The RBC Stress Test Project is a comprehensive quantitative research initiative 
+          focused on developing and maintaining a state-of-the-art framework for multi-asset 
+          scenario generation, stress testing, and risk analysis.
+        </p>
+        <p>
+          This project combines academic rigor with practical industry implementation, 
+          featuring advanced statistical methodologies, robust data pipelines, and 
+          comprehensive validation frameworks.
+        </p>
+      </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer style="
+      background: var(--bg-soft);
+      border-top: 1px solid var(--border);
+      padding: 48px 24px;
+      margin-top: 64px;
+    ">
+      <div class="container" style="text-align: center; color: var(--text-light);">
+        <p style="margin-bottom: 12px;">
+          &copy; 2026 RBC Stress Test Project. All rights reserved.
+        </p>
+        <p style="margin: 0; font-size: 0.9rem;">
+          Built with attention to detail and quantitative rigor
+        </p>
+      </div>
+    </footer>
+
+    <!-- ===== Navigation Script ===== -->
+    <script>
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+
+      navToggle?.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+
+      // Close menu when link is clicked
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weekly Reports - RBC Stress Test Project</title>
+    <meta
+      name="description"
+      content="Weekly reports and analysis for the RBC Stress Test Project"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      .reports-container {
+        max-width: 1000px;
+        margin: 48px auto;
+        padding: 0 24px;
+      }
+
+      .reports-section {
+        margin-bottom: 48px;
+      }
+
+      .reports-section h2 {
+        margin-bottom: 24px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid var(--border);
+      }
+
+      .reports-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 24px;
+      }
+
+      .report-card {
+        background: var(--bg-soft);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 24px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .report-card:hover {
+        border-color: var(--accent);
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(212, 55, 31, 0.15);
+      }
+
+      .report-date {
+        font-size: 0.8rem;
+        color: var(--text-light);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 8px;
+      }
+
+      .report-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 8px 0;
+        color: var(--text);
+      }
+
+      .report-card:hover .report-title {
+        color: var(--accent);
+      }
+
+      .report-description {
+        font-size: 0.9rem;
+        color: var(--text-light);
+        line-height: 1.6;
+        margin: 12px 0;
+      }
+
+      .report-meta {
+        display: flex;
+        gap: 16px;
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 1px solid var(--border);
+        font-size: 0.85rem;
+        color: var(--text-light);
+      }
+
+      .report-link {
+        color: var(--accent);
+        font-weight: 600;
+        text-decoration: none;
+        margin-top: 12px;
+        display: inline-block;
+        transition: all 0.2s ease;
+      }
+
+      .report-link:hover {
+        text-decoration: underline;
+      }
+
+      .template-notice {
+        background: linear-gradient(135deg, #fff3e0 0%, #fffde7 100%);
+        border-left: 4px solid #ff9800;
+        padding: 16px;
+        border-radius: 4px;
+        margin: 24px 0;
+      }
+
+      .template-notice p {
+        margin: 0;
+        color: #666;
+      }
+
+      .empty-state {
+        text-align: center;
+        padding: 48px 24px;
+        background: var(--bg-soft);
+        border-radius: 8px;
+        border: 1px solid var(--border);
+      }
+
+      .empty-state h3 {
+        margin-top: 0;
+        color: var(--text-light);
+      }
+
+      .empty-state p {
+        color: var(--text-light);
+        max-width: 500px;
+        margin: 12px auto;
+      }
+
+      .upload-section {
+        background: linear-gradient(135deg, #f5f1ee 0%, #ffffff 100%);
+        padding: 32px;
+        border-radius: 8px;
+        border: 2px dashed var(--border);
+        text-align: center;
+        margin-bottom: 48px;
+      }
+
+      .upload-section h3 {
+        margin-top: 0;
+      }
+
+      .upload-section p {
+        color: var(--text-light);
+      }
+
+      .btn-upload {
+        background: var(--accent);
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 12px;
+        transition: all 0.2s ease;
+      }
+
+      .btn-upload:hover {
+        background: #a82e1c;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== Header ===== -->
+    <header class="site-header">
+      <div class="container nav">
+        <a href="index.html" class="brand">
+          RBC Stress Test
+          <span class="brand-sub">Project Documentation</span>
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="docs.html">Documentation</a></li>
+          <li><a href="weekly-reports.html">Weekly Reports</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- ===== Main Content ===== -->
+    <main>
+      <div class="reports-container">
+        <h1>Weekly Reports</h1>
+        <p>
+          Stay updated with weekly analysis reports covering project progress, market insights, 
+          and scenario analysis results. Reports are generated automatically and published every week.
+        </p>
+
+        <!-- ===== Upload Section ===== -->
+        <div class="upload-section">
+          <h3>📤 Generate or Upload New Report</h3>
+          <p>
+            Add a new weekly report by uploading a document or generating from project data
+          </p>
+          <button class="btn-upload" onclick="alert('Upload functionality to be implemented')">
+            Upload Report
+          </button>
+        </div>
+
+        <!-- ===== Latest Reports Section ===== -->
+        <div class="reports-section">
+          <h2>Latest Reports</h2>
+          <div class="reports-grid" id="latest-reports">
+            <!-- Latest reports will be populated here -->
+            <div class="empty-state">
+              <h3>No Reports Available Yet</h3>
+              <p>
+                Weekly reports will appear here as they are generated. 
+                Check back soon or upload the first report to get started.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== Reports Archive Section ===== -->
+        <div class="reports-section">
+          <h2>Reports Archive</h2>
+          <p>
+            Historical weekly reports and analysis documentation
+          </p>
+
+          <div class="template-notice">
+            <p>
+              <strong>📝 Note:</strong> This is a template for organizing weekly reports. 
+              New reports will be added as they are generated and published.
+            </p>
+          </div>
+
+          <div class="reports-grid" id="archive-reports">
+            <!-- Archive will populate from local files or API -->
+          </div>
+        </div>
+
+        <!-- ===== Instructions Section ===== -->
+        <div class="reports-section">
+          <h2>About Weekly Reports</h2>
+          <p>
+            The weekly reports serve multiple purposes:
+          </p>
+          <ul>
+            <li>
+              <strong>Project Progress</strong>: Track development milestones and updates
+            </li>
+            <li>
+              <strong>Market Analysis</strong>: Weekly insights on market conditions and risk factors
+            </li>
+            <li>
+              <strong>Scenario Analysis</strong>: Results from latest stress testing runs
+            </li>
+            <li>
+              <strong>Performance Metrics</strong>: System performance and data quality metrics
+            </li>
+            <li>
+              <strong>Risk Highlights</strong>: Key risks identified and recommendations
+            </li>
+          </ul>
+
+          <h3>Report Structure</h3>
+          <p>
+            Each weekly report typically includes:
+          </p>
+          <ul>
+            <li>Executive Summary</li>
+            <li>Key Metrics and Performance Indicators</li>
+            <li>Market Overview and Risk Factor Analysis</li>
+            <li>Scenario Generation Results</li>
+            <li>Stress Test Outcomes</li>
+            <li>Data Quality Assessment</li>
+            <li>Next Week's Focus Areas</li>
+          </ul>
+
+          <h3>How to Access Reports</h3>
+          <p>
+            Reports are organized chronologically with the most recent at the top. 
+            Click on any report card to view the full document, or download it directly 
+            for offline access.
+          </p>
+
+          <h3>Automated Generation</h3>
+          <p>
+            Reports can be automatically generated from project data and metrics. 
+            The system supports scheduled generation every week or manual triggering 
+            on-demand.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer style="
+      background: var(--bg-soft);
+      border-top: 1px solid var(--border);
+      padding: 48px 24px;
+      margin-top: 64px;
+    ">
+      <div class="container" style="text-align: center; color: var(--text-light);">
+        <p style="margin-bottom: 12px;">
+          &copy; 2026 RBC Stress Test Project. All rights reserved.
+        </p>
+        <p style="margin: 0; font-size: 0.9rem;">
+          <a href="index.html" style="color: var(--accent);">Home</a> · 
+          <a href="docs.html" style="color: var(--accent);">Documentation</a> · 
+          <a href="weekly-reports.html" style="color: var(--accent);">Weekly Reports</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- ===== Scripts ===== -->
+    <script>
+      // Navigation toggle for mobile
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+
+      navToggle?.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+
+      // Close menu when link is clicked
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+        });
+      });
+
+      // Sample report data structure (can be populated from API or file system)
+      const sampleReports = [
+        {
+          week: 'Week 25',
+          date: 'June 18 - June 24, 2026',
+          title: 'Weekly Report: Latest Scenarios & Risk Analysis',
+          description: 'Complete analysis of latest scenario generations, stress testing results, and market risk assessments for the week.',
+          author: 'RBC Stress Test Team',
+          link: '#'
+        },
+        {
+          week: 'Week 24',
+          date: 'June 11 - June 17, 2026',
+          title: 'Weekly Report: Data Quality & Correlation Analysis',
+          description: 'Deep dive into data quality metrics, correlation structure updates, and covariance matrix enhancements.',
+          author: 'RBC Stress Test Team',
+          link: '#'
+        },
+        {
+          week: 'Week 23',
+          date: 'June 4 - June 10, 2026',
+          title: 'Weekly Report: Engine Optimization & Performance',
+          description: 'Summary of scenario generation engine optimizations, performance improvements, and system updates.',
+          author: 'RBC Stress Test Team',
+          link: '#'
+        }
+      ];
+
+      // Populate latest reports
+      const latestReportsContainer = document.getElementById('latest-reports');
+      if (latestReportsContainer && sampleReports.length > 0) {
+        latestReportsContainer.innerHTML = sampleReports.map(report => `
+          <a href="${report.link}" style="text-decoration: none; color: inherit;">
+            <div class="report-card">
+              <div class="report-date">${report.week}</div>
+              <div class="report-title">${report.title}</div>
+              <div class="report-description">${report.description}</div>
+              <div class="report-meta">
+                <span>📅 ${report.date}</span>
+              </div>
+              <span class="report-link">Read More →</span>
+            </div>
+          </a>
+        `).join('');
+      }
+
+      // Notes for implementation:
+      // 1. Connect to a backend API to fetch actual reports
+      // 2. Implement report upload functionality
+      // 3. Generate reports automatically using project data
+      // 4. Store reports in a database or file system
+      // 5. Add search and filter capabilities
+      // 6. Implement pagination for large number of reports
+    </script>
+  </body>
+</html>
