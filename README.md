@@ -262,7 +262,7 @@ See LICENSE file for details.
   GitHub: https://github.com/lgq13  
   LinkedIn: https://www.linkedin.com/in/guangqi-li/
 
-- **Jiahong Cheng**  
+- **Tony Cheng**  
   GitHub: https://github.com/tonychengcjh  
   LinkedIn: https://www.linkedin.com/in/tony-jiahong-cheng/
 
