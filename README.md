@@ -254,8 +254,17 @@ See LICENSE file for details.
 
 ## 👥 Contributors
 
-- Mo Minoneshan - Project Lead
-- Columbia Stress Test Team
+- **Mo Minoneshan** (Project Lead)  
+  GitHub: https://github.com/Minoneshan  
+  LinkedIn: https://www.linkedin.com/in/minoneshan/
+
+- **Guangqi Li**  
+  GitHub: https://github.com/lgq13  
+  LinkedIn: https://www.linkedin.com/in/guangqi-li/
+
+- **Jiahong Cheng**  
+  GitHub: https://github.com/tonychengcjh  
+  LinkedIn: https://www.linkedin.com/in/tony-jiahong-cheng/
 
 ## 🔄 Version History
 
