@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Stress Test Project</title>
+    <meta
+      name="description"
+      content="About the Stress Test Project and its collaboration model"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a href="index.html" class="brand">
+          Stress Test
+          <span class="brand-sub">Project Documentation</span>
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="docs.html">Documentation</a></li>
+          <li><a href="weekly-reports.html">Weekly Reports</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="container" style="max-width: 900px;">
+        <h1>About</h1>
+        <p>
+          The Stress Test Project is a summer project in collaboration with industry
+          partners.
+        </p>
+        <p>
+          It combines quantitative research, practical implementation, and iterative
+          reporting to build a robust stress-testing and scenario-analysis framework.
+        </p>
+      </section>
+    </main>
+
+    <footer style="background: var(--bg-soft); border-top: 1px solid var(--border); padding: 36px 24px;">
+      <div class="container" style="text-align: center; color: var(--text-light);">
+        <p style="margin: 0;">&copy; 2026 Stress Test Project</p>
+      </div>
+    </footer>
+
+    <script>
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      navToggle?.addEventListener('click', () => navLinks.classList.toggle('active'));
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => navLinks.classList.remove('active'));
+      });
+    </script>
+  </body>
+</html>
