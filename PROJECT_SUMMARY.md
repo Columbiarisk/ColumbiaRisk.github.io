@@ -1,8 +1,8 @@
-# RBC Stress Test Project Website - Launch Summary
+# Columbia Stress Test Project Website - Launch Summary
 
 ## ✅ Project Completed
 
-Your RBC Stress Test Project website has been successfully created with a professional Bookdown-style documentation portal and weekly reports hub!
+Your Columbia Stress Test Project website has been successfully created with a professional Bookdown-style documentation portal and weekly reports hub!
 
 ---
 
@@ -45,7 +45,7 @@ Your RBC Stress Test Project website has been successfully created with a profes
 
 ✅ **assets/css/style.css** (Main Stylesheet - 500+ lines)
 - CSS variables for easy customization
-- Professional color scheme (RBC Red accent)
+- Professional color scheme (Columbia Red accent)
 - Responsive grid system
 - Component-based styling
 - Mobile-first approach
@@ -124,7 +124,7 @@ Your RBC Stress Test Project website has been successfully created with a profes
 ## 🎨 Design Highlights
 
 ### Color Scheme
-- **Accent**: #d4371f (RBC Red)
+- **Accent**: #d4371f (Columbia Red)
 - **Text**: #1a1a1a
 - **Soft Background**: #f9f7f5
 - **Professional, clean aesthetics**
@@ -158,7 +158,7 @@ Your RBC Stress Test Project website has been successfully created with a profes
 
 ### 1. Local Testing
 ```bash
-cd /Users/minoneshan/Github/RBC_Project_Web/ColumbiaRiskRBC.github.io
+cd /Users/minoneshan/Github/Columbia_Project_Web/ColumbiaRiskColumbia.github.io
 python -m http.server 8000
 # Visit http://localhost:8000
 ```
@@ -178,12 +178,12 @@ python -m http.server 8000
 ### 4. Deploy to GitHub Pages
 ```bash
 git add .
-git commit -m "Initial launch of RBC Stress Test documentation site"
+git commit -m "Initial launch of Columbia Stress Test documentation site"
 git push origin main
 ```
 
 ### 5. Verify Live Site
-- Visit: `https://columbiariskrbc.github.io`
+- Visit: `https://columbiariskcolumbia.github.io`
 - Should be live within 1-5 minutes
 
 ---
@@ -191,7 +191,7 @@ git push origin main
 ## 📊 Current Website Structure
 
 ```
-ColumbiaRiskRBC.github.io/
+ColumbiaRiskColumbia.github.io/
 ├── index.html                 # ✅ Home page
 ├── docs.html                  # ✅ Documentation portal
 ├── weekly-reports.html        # ✅ Reports hub
@@ -336,7 +336,7 @@ For questions or issues:
 
 ## 🎊 Congratulations!
 
-Your RBC Stress Test Project documentation website is complete and ready for launch!
+Your Columbia Stress Test Project documentation website is complete and ready for launch!
 
 **Current Status**: ✅ All Systems Go
 
@@ -344,11 +344,11 @@ Your RBC Stress Test Project documentation website is complete and ready for lau
 
 ```bash
 git add .
-git commit -m "Initial RBC Stress Test documentation site launch"
+git commit -m "Initial Columbia Stress Test documentation site launch"
 git push origin main
 ```
 
-**Live Site**: https://columbiariskrbc.github.io
+**Live Site**: https://columbiariskcolumbia.github.io
 
 ---
 

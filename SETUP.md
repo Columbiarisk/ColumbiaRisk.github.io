@@ -1,6 +1,6 @@
-# RBC Stress Test Project Website - Setup Guide
+# Columbia Stress Test Project Website - Setup Guide
 
-Welcome! This guide will help you get the RBC Stress Test Project website up and running.
+Welcome! This guide will help you get the Columbia Stress Test Project website up and running.
 
 ## 📋 Table of Contents
 
@@ -23,8 +23,8 @@ Welcome! This guide will help you get the RBC Stress Test Project website up and
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/ColumbiaRiskRBC/ColumbiaRiskRBC.github.io.git
-cd ColumbiaRiskRBC.github.io
+git clone https://github.com/ColumbiaRiskColumbia/ColumbiaRiskColumbia.github.io.git
+cd ColumbiaRiskColumbia.github.io
 ```
 
 ### 2. Start Local Development Server
@@ -49,7 +49,7 @@ Visit `http://localhost:8000` in your web browser
 ### File Structure
 
 ```
-ColumbiaRiskRBC.github.io/
+ColumbiaRiskColumbia.github.io/
 ├── index.html                 # Home page
 ├── docs.html                  # Documentation
 ├── weekly-reports.html        # Weekly reports
@@ -140,7 +140,7 @@ All essential files are already created:
        date: 'June 25 - July 1, 2026',
        title: 'Your Report Title',
        description: 'Your report description',
-       author: 'RBC Stress Test Team',
+  author: 'Columbia Stress Test Team',
        link: 'weekly-reports/week-26.html'
      },
      // ... other reports
@@ -174,7 +174,7 @@ All essential files are already created:
    ```
 
 5. **Visit the live site**
-   - Navigate to: `https://columbiariskrbc.github.io`
+  - Navigate to: `https://columbiariskcolumbia.github.io`
    - Site updates typically within 1-5 minutes
 
 ### Using the Deployment Script
@@ -284,7 +284,7 @@ Edit `assets/css/style.css` - Update CSS variables:
 
 ```css
 :root {
-  --accent: #d4371f;           /* Main color (RBC Red) */
+  --accent: #d4371f;           /* Main color (Columbia Red) */
   --text: #1a1a1a;             /* Text color */
   --text-light: #6b6b6b;       /* Light text */
   --bg: #ffffff;               /* Background */
@@ -371,7 +371,7 @@ For questions or issues:
 
 1. Check GitHub Issues
 2. Review documentation
-3. Contact the RBC Stress Test Team
+3. Contact the Columbia Stress Test Team
 
 ## 📄 Version Info
 

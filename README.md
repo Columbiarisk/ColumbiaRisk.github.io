@@ -1,12 +1,12 @@
-# RBC Stress Test Project
+# Columbia Stress Test Project
 
 **Complete Documentation & Weekly Reports Hub**
 
-This is the official website for the RBC Stress Test Project, featuring a comprehensive Bookdown-style documentation portal and automated weekly reports system.
+This is the official website for the Columbia Stress Test Project, featuring a comprehensive Bookdown-style documentation portal and automated weekly reports system.
 
 ## 🎯 Project Overview
 
-The RBC Stress Test Project is a sophisticated quantitative research framework designed for:
+The Columbia Stress Test Project is a sophisticated quantitative research framework designed for:
 
 - **Multi-Asset Scenario Generation**: Conditional Gaussian scenarios across equities, fixed income, FX, and commodities
 - **Risk Analysis**: Comprehensive risk metrics computation (VaR, CVaR, Greeks)
@@ -49,8 +49,8 @@ The RBC Stress Test Project is a sophisticated quantitative research framework d
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ColumbiaRiskRBC/ColumbiaRiskRBC.github.io.git
-cd ColumbiaRiskRBC.github.io
+git clone https://github.com/ColumbiaRiskColumbia/ColumbiaRiskColumbia.github.io.git
+cd ColumbiaRiskColumbia.github.io
 ```
 
 2. Open in a local web server:
@@ -80,7 +80,7 @@ git push origin main
 ## 📁 Project Structure
 
 ```
-ColumbiaRiskRBC.github.io/
+ColumbiaRiskColumbia.github.io/
 ├── index.html                 # Main landing page
 ├── docs.html                  # Complete documentation
 ├── weekly-reports.html        # Weekly reports hub
@@ -99,7 +99,7 @@ ColumbiaRiskRBC.github.io/
 
 ### Color Scheme
 
-- **Accent Color**: #d4371f (RBC Red)
+- **Accent Color**: #d4371f (Columbia Red)
 - **Text**: #1a1a1a (Dark)
 - **Text Light**: #6b6b6b (Gray)
 - **Background**: #ffffff (White)
@@ -157,7 +157,7 @@ The site is fully responsive with breakpoints at:
 
 ### With Main Project
 
-The website integrates with the main RBC Stress Test project through:
+The website integrates with the main Columbia Stress Test project through:
 
 1. **Documentation Source**: Markdown/HTML files from project repository
 2. **Automated Report Generation**: Python scripts generate weekly reports
@@ -245,7 +245,7 @@ Planned activities and priorities
 For questions or issues regarding:
 
 - **Documentation**: Open an issue on GitHub
-- **Weekly Reports**: Contact the RBC Stress Test Team
+- **Weekly Reports**: Contact the Columbia Stress Test Team
 - **Technical Issues**: Submit a pull request with proposed fixes
 
 ## 📄 License
@@ -255,7 +255,7 @@ See LICENSE file for details.
 ## 👥 Contributors
 
 - Mo Minoneshan - Project Lead
-- RBC Stress Test Team
+- Columbia Stress Test Team
 
 ## 🔄 Version History
 
@@ -277,10 +277,10 @@ See LICENSE file for details.
 
 - [Personal Website](https://minoneshan.github.io/)
 - [Stress Scenario Engine](https://minoneshan.github.io/projects/stress-scenario-engine/)
-- [GitHub Repository](https://github.com/ColumbiaRiskRBC/ColumbiaRiskRBC.github.io)
+- [GitHub Repository](https://github.com/ColumbiaRiskColumbia/ColumbiaRiskColumbia.github.io)
 
 ---
 
 **Last Updated**: June 25, 2026
 
-For the latest information and updates, visit: https://columbiariskrbc.github.io/
+For the latest information and updates, visit: https://columbiariskcolumbia.github.io/

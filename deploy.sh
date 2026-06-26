@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# RBC Stress Test Website - Setup & Deployment Script
+# Columbia Stress Test Website - Setup & Deployment Script
 # This script helps set up and deploy the website
 
 set -e
 
-echo "🚀 RBC Stress Test Website Setup"
+echo "🚀 Columbia Stress Test Website Setup"
 echo "================================="
 
 # Colors for output
@@ -77,7 +77,7 @@ echo "✓ Setup complete!"
 echo ""
 echo "Next steps:"
 echo "1. Push to GitHub: git push origin main"
-echo "2. Visit: https://columbiariskrbc.github.io"
+echo "2. Visit: https://columbiariskcolumbia.github.io"
 echo ""
 echo "To start a local development server:"
 echo "  python -m http.server 8000"
