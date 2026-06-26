@@ -1,5 +1,5 @@
 /**
- * RBC Stress Test Project - Documentation Site Utilities
+ * Stress Test Project - Documentation Site Utilities
  * Version: 1.0
  */
 
