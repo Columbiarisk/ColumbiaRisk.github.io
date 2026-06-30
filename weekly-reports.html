@@ -337,7 +337,7 @@
       });
 
       // Sample report data structure (can be populated from API or file system)
-      const sampleReports = [
+      const reports = [
         {
           week: 'Week 2',
           date: 'June 23 - June 29, 2026',
@@ -345,37 +345,31 @@
           description: 'Out-of-sample validation, copula tail-risk results, and production architecture transition notes.',
           author: 'Stress Test Team',
           link: 'weekly-reports/Week2/week2_report.html'
-        },
-        {
-          week: 'Week 25',
-          date: 'June 18 - June 24, 2026',
-          title: 'Weekly Report: Latest Scenarios & Risk Analysis',
-          description: 'Complete analysis of latest scenario generations, stress testing results, and market risk assessments for the week.',
-          author: 'Stress Test Team',
-          link: 'weekly-reports/week-25-sample.html'
-        },
-        {
-          week: 'Week 24',
-          date: 'June 11 - June 17, 2026',
-          title: 'Weekly Report: Data Quality & Correlation Analysis',
-          description: 'Deep dive into data quality metrics, correlation structure updates, and covariance matrix enhancements.',
-          author: 'Stress Test Team',
-          link: 'weekly-reports/week-25-sample.html'
-        },
-        {
-          week: 'Week 23',
-          date: 'June 4 - June 10, 2026',
-          title: 'Weekly Report: Engine Optimization & Performance',
-          description: 'Summary of scenario generation engine optimizations, performance improvements, and system updates.',
-          author: 'Stress Test Team',
-          link: 'weekly-reports/week-25-sample.html'
         }
       ];
 
       // Populate latest reports
       const latestReportsContainer = document.getElementById('latest-reports');
-      if (latestReportsContainer && sampleReports.length > 0) {
-        latestReportsContainer.innerHTML = sampleReports.map(report => `
+      if (latestReportsContainer && reports.length > 0) {
+        latestReportsContainer.innerHTML = reports.slice(0, 1).map(report => `
+          <a href="${report.link}" style="text-decoration: none; color: inherit;">
+            <div class="report-card">
+              <div class="report-date">${report.week}</div>
+              <div class="report-title">${report.title}</div>
+              <div class="report-description">${report.description}</div>
+              <div class="report-meta">
+                <span>📅 ${report.date}</span>
+              </div>
+              <span class="report-link">Read More →</span>
+            </div>
+          </a>
+        `).join('');
+      }
+
+      // Populate archive reports (currently includes all published reports)
+      const archiveReportsContainer = document.getElementById('archive-reports');
+      if (archiveReportsContainer && reports.length > 0) {
+        archiveReportsContainer.innerHTML = reports.map(report => `
           <a href="${report.link}" style="text-decoration: none; color: inherit;">
             <div class="report-card">
               <div class="report-date">${report.week}</div>
